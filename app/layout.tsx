@@ -16,13 +16,13 @@ const spaceGrotesk = Space_Grotesk({
   display: 'swap',
 })
 
-const siteUrl = 'https://cuatricolor-imprenta.vercel.app'
+const siteUrl = 'https://baster-imprenta.vercel.app'
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: 'Cuatricolor — Ploteados personalizados y stickers para tu marca',
-    template: '%s | Cuatricolor',
+    default: 'Baster — Ploteados personalizados y stickers para tu marca',
+    template: '%s | Baster',
   },
   description:
     'Imprenta especializada en ploteados personalizados para vidrieras, paredes y superficies, más stickers a medida. Diseño, impresión de alta calidad e instalación en toda la ciudad.',
@@ -36,8 +36,8 @@ export const metadata: Metadata = {
     'cartelería',
     'vinilo de corte',
   ],
-  authors: [{ name: 'Cuatricolor' }],
-  creator: 'Cuatricolor',
+  authors: [{ name: 'Baster' }],
+  creator: 'Baster',
   generator: 'v0.app',
   alternates: {
     canonical: '/',
@@ -46,8 +46,8 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'es_AR',
     url: siteUrl,
-    siteName: 'Cuatricolor',
-    title: 'Cuatricolor — Ploteados personalizados y stickers para tu marca',
+    siteName: 'Baster',
+    title: 'Baster — Ploteados personalizados y stickers para tu marca',
     description:
       'Ploteados para vidrieras, paredes y superficies + stickers a medida. Diseño, impresión de alta calidad e instalación profesional.',
     images: [
@@ -55,13 +55,13 @@ export const metadata: Metadata = {
         url: '/logo-empresa.jpg',
         width: 1024,
         height: 1024,
-        alt: 'Logotipo de Cuatricolor imprenta',
+        alt: 'Logotipo de Baster imprenta',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Cuatricolor — Ploteados personalizados y stickers',
+    title: 'Baster — Ploteados personalizados y stickers',
     description:
       'Ploteados para vidrieras, paredes y superficies + stickers a medida. Diseño, impresión e instalación profesional.',
     images: ['/logo-empresa.jpg'],
@@ -89,7 +89,8 @@ export default function RootLayout({
   return (
     <html
       lang="es"
-      className={`${inter.variable} ${spaceGrotesk.variable} bg-background`}
+      className={`light ${inter.variable} ${spaceGrotesk.variable} bg-background`}
+      style={{ colorScheme: 'light' }}
     >
       <body className="font-sans antialiased">
         {children}

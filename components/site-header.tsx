@@ -43,19 +43,19 @@ export function SiteHeader() {
       <div className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
         <a
           href="#inicio"
-          className="flex items-center gap-2.5 rounded-md focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-brand"
-          aria-label="Cuatricolor — inicio"
+          className="group flex items-center gap-2.5 rounded-md focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-brand"
+          aria-label="Baster — inicio"
         >
           <Image
             src="/logo-empresa.jpg"
-            alt="Logotipo de Cuatricolor"
+            alt="Logotipo de Baster"
             width={40}
             height={40}
-            className="h-9 w-9 rounded-lg object-contain"
+            className="h-9 w-9 rounded-lg object-contain transition-transform duration-300 group-hover:rotate-6"
             priority
           />
           <span className="font-display text-lg font-bold tracking-tight text-ink">
-            Cuatri<span className="text-magenta-brand">color</span>
+            Bas<span className="text-magenta-brand">ter</span>
           </span>
         </a>
 

@@ -176,18 +176,21 @@
   }
 }
 
-/* Scroll reveal */
+/* Scroll reveal — soft blur-in for a less stiff feel */
 .reveal {
   opacity: 0;
-  transform: translateY(24px);
+  transform: translateY(28px);
+  filter: blur(6px);
   transition:
-    opacity 0.7s cubic-bezier(0.23, 1, 0.32, 1),
-    transform 0.7s cubic-bezier(0.23, 1, 0.32, 1);
-  will-change: opacity, transform;
+    opacity 0.8s cubic-bezier(0.23, 1, 0.32, 1),
+    transform 0.8s cubic-bezier(0.23, 1, 0.32, 1),
+    filter 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  will-change: opacity, transform, filter;
 }
 .reveal[data-visible='true'] {
   opacity: 1;
   transform: none;
+  filter: blur(0);
 }
 
 /* Halftone dot texture for print vibe */
@@ -209,13 +212,100 @@
   animation: marquee 32s linear infinite;
 }
 
+/* Gentle floating for decorative panels/chips */
+@keyframes float-y {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+.animate-float {
+  animation: float-y 7s ease-in-out infinite;
+}
+.animate-float-slow {
+  animation: float-y 10s ease-in-out infinite;
+}
+
+/* Slow rotation for the halftone print texture */
+@keyframes spin-slow {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.animate-spin-slow {
+  animation: spin-slow 60s linear infinite;
+}
+
+/* Animated CMYK registration bar — colors drift across */
+@keyframes cmyk-pan {
+  to {
+    background-position: 200% 0;
+  }
+}
+.cmyk-bar {
+  background: linear-gradient(
+    90deg,
+    var(--color-cyan-brand),
+    var(--color-magenta-brand),
+    var(--color-yellow-brand),
+    var(--color-ink),
+    var(--color-cyan-brand)
+  );
+  background-size: 200% 100%;
+  animation: cmyk-pan 8s linear infinite;
+}
+
+/* Soft entrance for hero, plays on load */
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.97);
+    filter: blur(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+    filter: blur(0);
+  }
+}
+.animate-rise {
+  animation: rise-in 0.7s cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+
+/* Reusable hover lift for cards and tiles */
+.hover-lift {
+  transition:
+    transform 0.28s cubic-bezier(0.23, 1, 0.32, 1),
+    box-shadow 0.28s cubic-bezier(0.23, 1, 0.32, 1),
+    border-color 0.28s ease;
+  will-change: transform;
+}
+@media (hover: hover) and (pointer: fine) {
+  .hover-lift:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px -20px rgb(32 31 39 / 0.35);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .reveal {
     opacity: 1 !important;
     transform: none !important;
+    filter: none !important;
     transition: none !important;
   }
-  .animate-marquee {
+  .animate-marquee,
+  .animate-float,
+  .animate-float-slow,
+  .animate-spin-slow,
+  .cmyk-bar,
+  .animate-rise {
     animation: none !important;
+  }
+  .cmyk-bar {
+    background-size: 100% 100%;
   }
 }
