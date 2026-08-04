@@ -48,7 +48,7 @@ export function Cta() {
                 className="font-display font-bold tracking-tight text-balance text-ink"
               >
                 <span className="block text-2xl sm:text-3xl">¿Tenés un proyecto?</span>
-                <span className="misregister-dark block text-4xl sm:text-5xl">Hablemos.</span>
+                <span className="misregister-dark block text-4xl text-white sm:text-5xl">Hablemos.</span>
               </Reveal>
               <Reveal
                 as="p"
@@ -103,7 +103,7 @@ export function Cta() {
                         type="text"
                         required
                         autoComplete="name"
-                        className="h-11 w-full rounded-lg border border-[#e0dbd4] bg-[#f5f0eb] px-3 text-ink outline-none transition-colors focus-visible:border-cyan-brand focus-visible:ring-3 focus-visible:ring-cyan-brand/25"
+                        className="h-11 w-full rounded-lg border border-gray-200 bg-white px-3 text-ink outline-none transition-colors focus-visible:border-cyan-brand focus-visible:ring-3 focus-visible:ring-cyan-brand/25"
                       />
                     </div>
                     <div>
@@ -119,7 +119,7 @@ export function Cta() {
                         type="email"
                         required
                         autoComplete="email"
-                        className="h-11 w-full rounded-lg border border-[#e0dbd4] bg-[#f5f0eb] px-3 text-ink outline-none transition-colors focus-visible:border-cyan-brand focus-visible:ring-3 focus-visible:ring-cyan-brand/25"
+                        className="h-11 w-full rounded-lg border border-gray-200 bg-white px-3 text-ink outline-none transition-colors focus-visible:border-cyan-brand focus-visible:ring-3 focus-visible:ring-cyan-brand/25"
                       />
                     </div>
                     <div>
@@ -132,7 +132,7 @@ export function Cta() {
                       <select
                         id="service"
                         name="service"
-                        className="h-11 w-full rounded-lg border border-[#e0dbd4] bg-[#f5f0eb] px-3 text-ink outline-none transition-colors focus-visible:border-cyan-brand focus-visible:ring-3 focus-visible:ring-cyan-brand/25"
+                        className="h-11 w-full rounded-lg border border-gray-200 bg-white px-3 text-ink outline-none transition-colors focus-visible:border-cyan-brand focus-visible:ring-3 focus-visible:ring-cyan-brand/25"
                       >
                         {SERVICE_OPTIONS.map((option) => (
                           <option key={option}>{option}</option>
@@ -151,7 +151,7 @@ export function Cta() {
                         name="message"
                         rows={3}
                         placeholder="Medidas, cantidades, fecha estimada…"
-                        className="w-full rounded-lg border border-[#e0dbd4] bg-[#f5f0eb] px-3 py-2.5 text-ink outline-none transition-colors placeholder:text-ink/40 focus-visible:border-cyan-brand focus-visible:ring-3 focus-visible:ring-cyan-brand/25"
+                        className="w-full rounded-lg border border-gray-200 bg-white px-3 py-2.5 text-ink outline-none transition-colors placeholder:text-ink/40 focus-visible:border-cyan-brand focus-visible:ring-3 focus-visible:ring-cyan-brand/25"
                       />
                     </div>
                   </div>
