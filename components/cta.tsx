@@ -28,7 +28,7 @@ export function Cta() {
       className="scroll-mt-20 py-16 md:py-24"
     >
       <div className="mx-auto w-full max-w-6xl px-4 sm:px-6">
-        <div className="relative overflow-hidden rounded-3xl bg-ink px-6 py-12 sm:px-10 md:py-16">
+        <div className="relative overflow-hidden rounded-3xl bg-white px-6 py-12 sm:px-10 md:py-16">
           {/* Decorative halftone */}
           <div
             aria-hidden="true"
