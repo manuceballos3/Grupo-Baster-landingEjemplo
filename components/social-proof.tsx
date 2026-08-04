@@ -2,14 +2,14 @@ import { Reveal } from '@/components/reveal'
 import { TestimonialsGsap } from '@/components/testimonials-gsap'
 
 const CLIENTS = [
-  'Café Aurora',
-  'Estudio Norte',
-  'Verdulería La Huerta',
-  'Gimnasio Pulso',
+  'Café Bar Plaza',
+  'Estudio Caneva Abogados',
+  'Verdulería La Quinta',
+  'Gimnasio CEKIDE',
   'Boutique Lila',
-  'Farmacia San Martín',
+  'Farmacia Roggio',
   'Barbería Roble',
-  'Heladería Polo',
+  'Heladería Neo Helados',
 ]
 
 export function SocialProof() {
