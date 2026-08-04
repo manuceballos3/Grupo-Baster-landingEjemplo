@@ -295,11 +295,19 @@
 }
 
 /* CMYK misregistration / print misalignment effect */
+/* — light variant: for dark backgrounds (subtle, semi-transparent) */
 .misregister {
   text-shadow:
     3px 0 0 color-mix(in srgb, var(--color-cyan-brand) 55%, transparent),
     -3px 2px 0 color-mix(in srgb, var(--color-magenta-brand) 45%, transparent),
     0 -2px 0 color-mix(in srgb, var(--color-yellow-brand) 55%, transparent);
+}
+/* — dark variant: for light backgrounds (stronger, full-color) */
+.misregister-dark {
+  text-shadow:
+    4px 1px 0 color-mix(in srgb, var(--color-cyan-brand) 75%, transparent),
+    -4px 3px 0 color-mix(in srgb, var(--color-magenta-brand) 65%, transparent),
+    1px -3px 0 color-mix(in srgb, var(--color-yellow-brand) 80%, transparent);
 }
 
 /* Reusable hover lift for cards and tiles */
@@ -338,7 +346,8 @@
   .cmyk-bar {
     background-size: 100% 100%;
   }
-  .misregister {
+  .misregister,
+  .misregister-dark {
     text-shadow: none;
   }
 }
