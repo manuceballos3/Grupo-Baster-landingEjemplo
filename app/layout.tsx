@@ -1,6 +1,7 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
 import { Inter, Space_Grotesk } from 'next/font/google'
+import { SmoothScrollProvider } from '@/components/smooth-scroll-provider'
 import './globals.css'
 
 const inter = Inter({
@@ -93,7 +94,7 @@ export default function RootLayout({
       style={{ colorScheme: 'light' }}
     >
       <body className="font-sans antialiased">
-        {children}
+        <SmoothScrollProvider>{children}</SmoothScrollProvider>
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>
