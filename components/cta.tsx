@@ -44,9 +44,10 @@ export function Cta() {
             <div>
               <Reveal
                 as="h2"
-                className="font-display text-3xl font-bold tracking-tight text-balance text-white sm:text-4xl"
+                className="font-display font-bold tracking-tight text-balance text-white"
               >
-                ¿Listo para que tu marca se vea increíble?
+                <span className="block text-2xl sm:text-3xl">¿Tenés un proyecto?</span>
+                <span className="misregister block text-4xl sm:text-5xl">Hablemos.</span>
               </Reveal>
               <Reveal
                 as="p"

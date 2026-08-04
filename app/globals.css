@@ -294,6 +294,14 @@
   animation: rise-in 0.7s cubic-bezier(0.23, 1, 0.32, 1) both;
 }
 
+/* CMYK misregistration / print misalignment effect */
+.misregister {
+  text-shadow:
+    3px 0 0 color-mix(in srgb, var(--color-cyan-brand) 55%, transparent),
+    -3px 2px 0 color-mix(in srgb, var(--color-magenta-brand) 45%, transparent),
+    0 -2px 0 color-mix(in srgb, var(--color-yellow-brand) 55%, transparent);
+}
+
 /* Reusable hover lift for cards and tiles */
 .hover-lift {
   transition:
@@ -329,5 +337,8 @@
   }
   .cmyk-bar {
     background-size: 100% 100%;
+  }
+  .misregister {
+    text-shadow: none;
   }
 }
