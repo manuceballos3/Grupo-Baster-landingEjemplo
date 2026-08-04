@@ -11,13 +11,13 @@ export function SiteFooter() {
           <div className="flex items-center gap-2.5">
             <Image
               src="/logo-empresa.jpg"
-              alt="Logotipo de Cuatricolor"
+              alt="Logotipo de Baster"
               width={40}
               height={40}
               className="h-9 w-9 rounded-lg object-contain"
             />
             <span className="font-display text-lg font-bold tracking-tight text-ink">
-              Cuatri<span className="text-magenta-brand">color</span>
+              Bas<span className="text-magenta-brand">ter</span>
             </span>
           </div>
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-ink-soft">
@@ -58,7 +58,7 @@ export function SiteFooter() {
           <ul className="mt-4 flex flex-col gap-3 text-sm text-ink-soft">
             <li className="flex items-start gap-2.5">
               <MapPin className="mt-0.5 size-4 shrink-0 text-cyan-brand" aria-hidden="true" />
-              Av. Siempreviva 1234, tu ciudad
+              Avenida General López y Moreno, Sastre, Santa Fe
             </li>
             <li className="flex items-start gap-2.5">
               <Phone className="mt-0.5 size-4 shrink-0 text-cyan-brand" aria-hidden="true" />
@@ -72,10 +72,10 @@ export function SiteFooter() {
             <li className="flex items-start gap-2.5">
               <Mail className="mt-0.5 size-4 shrink-0 text-cyan-brand" aria-hidden="true" />
               <a
-                href="mailto:hola@cuatricolor.com"
+                href="mailto:grupobaster@gmail.com"
                 className="rounded transition-colors hover:text-magenta-brand focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-brand"
               >
-                hola@cuatricolor.com
+                grupobaster@gmail.com
               </a>
             </li>
             <li className="flex items-start gap-2.5">
@@ -88,7 +88,7 @@ export function SiteFooter() {
 
       <div className="border-t border-border">
         <div className="mx-auto flex w-full max-w-6xl flex-col items-center justify-between gap-2 px-4 py-6 text-sm text-ink-soft sm:flex-row sm:px-6">
-          <p>© {year} Cuatricolor. Todos los derechos reservados.</p>
+          <p>© {year} Baster. Todos los derechos reservados.</p>
           <div className="flex items-center gap-1.5" aria-hidden="true">
             <span className="size-3 rounded-full bg-cyan-brand" />
             <span className="size-3 rounded-full bg-magenta-brand" />

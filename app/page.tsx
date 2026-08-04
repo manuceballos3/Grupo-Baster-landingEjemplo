@@ -8,7 +8,7 @@ import { Cta } from '@/components/cta'
 import { SiteFooter } from '@/components/site-footer'
 import { FAQ_ITEMS } from '@/lib/faq'
 
-const siteUrl = 'https://cuatricolor-imprenta.vercel.app'
+const siteUrl = 'https://baster-imprenta.vercel.app'
 
 const structuredData = {
   '@context': 'https://schema.org',
@@ -16,19 +16,20 @@ const structuredData = {
     {
       '@type': 'LocalBusiness',
       '@id': `${siteUrl}/#business`,
-      name: 'Cuatricolor',
+      name: 'Baster',
       description:
         'Imprenta especializada en ploteados personalizados para vidrieras, paredes y superficies, más stickers a medida.',
       url: siteUrl,
       image: `${siteUrl}/logo-empresa.jpg`,
       logo: `${siteUrl}/logo-empresa.jpg`,
       telephone: '+54-9-000-000-0000',
-      email: 'hola@cuatricolor.com',
+      email: 'grupobaster@gmail.com',
       priceRange: '$$',
       address: {
         '@type': 'PostalAddress',
-        streetAddress: 'Av. Siempreviva 1234',
-        addressLocality: 'Tu ciudad',
+        streetAddress: 'Avenida General López y Moreno',
+        addressLocality: 'Sastre',
+        addressRegion: 'Santa Fe',
         addressCountry: 'AR',
       },
       openingHoursSpecification: [

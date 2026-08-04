@@ -167,8 +167,19 @@
   * {
     @apply border-border outline-ring/50;
   }
+  html {
+    /* Desplazamiento suave para todos los enlaces internos (#servicios, #cotizar, etc.) */
+    scroll-behavior: smooth;
+  }
   body {
     @apply bg-background text-foreground;
+  }
+  /* Deja espacio para el header fijo al saltar a una sección */
+  :target,
+  section[id],
+  [id='cotizar'],
+  [id='inicio'] {
+    scroll-margin-top: 5.5rem;
   }
   ::selection {
     background: var(--color-magenta-brand);
@@ -291,6 +302,9 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
   .reveal {
     opacity: 1 !important;
     transform: none !important;

@@ -8,22 +8,17 @@ export function Hero() {
       id="inicio"
       className="relative overflow-hidden border-b border-border"
     >
-      {/* Decorative CMYK registration bar */}
+      {/* Decorative CMYK registration bar (animada) */}
       <div
         aria-hidden="true"
-        className="absolute inset-x-0 top-0 flex h-1.5"
-      >
-        <span className="flex-1 bg-cyan-brand" />
-        <span className="flex-1 bg-magenta-brand" />
-        <span className="flex-1 bg-yellow-brand" />
-        <span className="flex-1 bg-ink" />
-      </div>
+        className="cmyk-bar absolute inset-x-0 top-0 h-1.5"
+      />
 
       <div
         aria-hidden="true"
         className="pointer-events-none absolute -right-24 -top-10 hidden text-cyan-brand/15 lg:block"
       >
-        <div className="halftone size-[420px] rounded-full" />
+        <div className="halftone animate-spin-slow size-[420px] rounded-full" />
       </div>
 
       <div className="mx-auto grid w-full max-w-6xl gap-12 px-4 py-16 sm:px-6 md:py-24 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
@@ -98,8 +93,8 @@ export function Hero() {
         {/* Visual composition */}
         <Reveal delay={120} className="relative">
           <div className="relative mx-auto aspect-[4/5] w-full max-w-md">
-            <div className="absolute inset-0 -rotate-3 rounded-3xl bg-yellow-brand/25" aria-hidden="true" />
-            <div className="absolute inset-0 rotate-2 rounded-3xl bg-cyan-brand/20" aria-hidden="true" />
+            <div className="animate-float-slow absolute inset-0 -rotate-3 rounded-3xl bg-yellow-brand/25" aria-hidden="true" />
+            <div className="animate-float absolute inset-0 rotate-2 rounded-3xl bg-cyan-brand/20" aria-hidden="true" />
             <div className="absolute inset-2 overflow-hidden rounded-3xl border border-border bg-secondary shadow-xl">
               <img
                 src="/placeholder.svg?height=800&width=640"
@@ -108,7 +103,7 @@ export function Hero() {
               />
             </div>
             {/* Floating chip */}
-            <div className="absolute -bottom-4 -left-4 flex items-center gap-3 rounded-2xl border border-border bg-background/95 px-4 py-3 shadow-lg backdrop-blur">
+            <div className="animate-float absolute -bottom-4 -left-4 flex items-center gap-3 rounded-2xl border border-border bg-background/95 px-4 py-3 shadow-lg backdrop-blur">
               <span className="flex size-9 items-center justify-center rounded-full bg-magenta-brand/10 text-magenta-brand" aria-hidden="true">
                 <Star className="size-4 fill-magenta-brand" />
               </span>
