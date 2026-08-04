@@ -168,8 +168,9 @@
     @apply border-border outline-ring/50;
   }
   html {
-    /* Desplazamiento suave para todos los enlaces internos (#servicios, #cotizar, etc.) */
-    scroll-behavior: smooth;
+    /* scroll-behavior lo maneja useSmoothScroll (JS) para mayor compatibilidad
+       con el header sticky y el overflow:hidden del menú móvil. */
+    scroll-behavior: auto;
   }
   body {
     @apply bg-background text-foreground;
