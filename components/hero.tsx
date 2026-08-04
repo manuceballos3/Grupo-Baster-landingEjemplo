@@ -97,9 +97,9 @@ export function Hero() {
             <div className="animate-float absolute inset-0 rotate-2 rounded-3xl bg-cyan-brand/20" aria-hidden="true" />
             <div className="absolute inset-2 overflow-hidden rounded-3xl border border-border bg-secondary shadow-xl">
               <img
-                src="/placeholder.svg?height=800&width=640"
-                alt="Vidriera de local comercial con ploteado de vinilo personalizado en colores vivos"
-                className="size-full object-cover"
+                src="/hero-baster.jpg"
+                alt="Integrante del equipo Grupo Baster trabajando en el local, con maquinaria de impresión y ploteado de fondo"
+                className="size-full object-cover object-top"
               />
             </div>
             {/* Floating chip */}
