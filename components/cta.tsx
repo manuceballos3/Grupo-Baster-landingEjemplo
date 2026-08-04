@@ -28,11 +28,11 @@ export function Cta() {
       className="scroll-mt-20 py-16 md:py-24"
     >
       <div className="mx-auto w-full max-w-6xl px-4 sm:px-6">
-        <div className="relative overflow-hidden rounded-3xl bg-[#f5f0eb] px-6 py-12 sm:px-10 md:py-16">
-          {/* Decorative halftone — tinted ink for contrast on light bg */}
+        <div className="relative overflow-hidden rounded-3xl bg-ink px-6 py-12 sm:px-10 md:py-16">
+          {/* Decorative halftone */}
           <div
             aria-hidden="true"
-            className="halftone pointer-events-none absolute -right-16 -bottom-16 size-72 rounded-full text-ink/8"
+            className="halftone pointer-events-none absolute -right-16 -bottom-16 size-72 rounded-full text-white/10"
           />
           {/* CMYK registration bar */}
           <div aria-hidden="true" className="absolute inset-x-0 top-0 flex h-1.5">
@@ -45,15 +45,15 @@ export function Cta() {
             <div>
               <Reveal
                 as="h2"
-                className="font-display font-bold tracking-tight text-balance text-ink"
+                className="font-display font-bold tracking-tight text-balance text-white"
               >
                 <span className="block text-2xl sm:text-3xl">¿Tenés un proyecto?</span>
-                <span className="misregister-dark block text-4xl sm:text-5xl">Hablemos.</span>
+                <span className="misregister block text-4xl sm:text-5xl">Hablemos.</span>
               </Reveal>
               <Reveal
                 as="p"
                 delay={80}
-                className="mt-4 max-w-md text-lg leading-relaxed text-pretty text-ink-soft"
+                className="mt-4 max-w-md text-lg leading-relaxed text-pretty text-white/70"
               >
                 Contanos tu proyecto y te enviamos un presupuesto sin cargo en
                 menos de 24 horas. Sin compromiso.
@@ -61,7 +61,7 @@ export function Cta() {
               <Reveal delay={140} className="mt-8">
                 <a
                   href="https://wa.me/5490000000000"
-                  className="group inline-flex h-12 items-center justify-center gap-2 rounded-full bg-ink px-6 text-base font-semibold text-white transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink"
+                  className="group inline-flex h-12 items-center justify-center gap-2 rounded-full bg-yellow-brand px-6 text-base font-semibold text-ink transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-brand"
                 >
                   <MessageCircle className="size-5" aria-hidden="true" />
                   Escribinos por WhatsApp
