@@ -12,8 +12,9 @@
   --color-cyan-brand: #10bcd9;
   --color-magenta-brand: #ec168c;
   --color-yellow-brand: #ffd21f;
-  --color-ink: #201f27;
-  --color-ink-soft: #4a4954;
+  /* ink tokens are theme-aware — resolved from CSS vars so dark mode overrides apply */
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
 
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
@@ -59,6 +60,8 @@
   color-scheme: light;
   --background: #ffffff;
   --foreground: #201f27;
+  --ink: #201f27;
+  --ink-soft: #4a4954;
   --card: #ffffff;
   --card-foreground: #201f27;
   --popover: #ffffff;
@@ -95,6 +98,8 @@
   color-scheme: dark;
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);
+  --ink: oklch(0.985 0 0);
+  --ink-soft: oklch(0.708 0 0);
   --card: oklch(0.205 0 0);
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.205 0 0);
@@ -131,6 +136,8 @@
     color-scheme: dark;
     --background: oklch(0.145 0 0);
     --foreground: oklch(0.985 0 0);
+    --ink: oklch(0.985 0 0);
+    --ink-soft: oklch(0.708 0 0);
     --card: oklch(0.205 0 0);
     --card-foreground: oklch(0.985 0 0);
     --popover: oklch(0.205 0 0);
