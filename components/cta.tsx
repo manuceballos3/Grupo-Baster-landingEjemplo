@@ -48,7 +48,7 @@ export function Cta() {
                 className="font-display font-bold tracking-tight text-balance text-ink"
               >
                 <span className="block text-2xl sm:text-3xl">¿Tenés un proyecto?</span>
-                <span className="misregister-dark block text-4xl text-white sm:text-5xl">Hablemos.</span>
+                <span className="misregister-dark block text-4xl sm:text-5xl">Hablemos.</span>
               </Reveal>
               <Reveal
                 as="p"

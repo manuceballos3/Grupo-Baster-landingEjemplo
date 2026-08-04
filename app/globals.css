@@ -302,12 +302,12 @@
     -3px 2px 0 color-mix(in srgb, var(--color-magenta-brand) 45%, transparent),
     0 -2px 0 color-mix(in srgb, var(--color-yellow-brand) 55%, transparent);
 }
-/* — dark variant: for light backgrounds (stronger, full-color) */
+/* — dark variant: for light backgrounds (softer, semi-transparent) */
 .misregister-dark {
   text-shadow:
-    4px 1px 0 color-mix(in srgb, var(--color-cyan-brand) 75%, transparent),
-    -4px 3px 0 color-mix(in srgb, var(--color-magenta-brand) 65%, transparent),
-    1px -3px 0 color-mix(in srgb, var(--color-yellow-brand) 80%, transparent);
+    4px 1px 0 color-mix(in srgb, var(--color-cyan-brand) 35%, transparent),
+    -4px 3px 0 color-mix(in srgb, var(--color-magenta-brand) 30%, transparent),
+    1px -3px 0 color-mix(in srgb, var(--color-yellow-brand) 40%, transparent);
 }
 
 /* Reusable hover lift for cards and tiles */
