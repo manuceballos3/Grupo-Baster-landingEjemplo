@@ -231,9 +231,9 @@
   animation: marquee 32s linear infinite;
 }
 
-/* Slower marquee, used for the photo strip */
+/* Photo strip marquee */
 .animate-marquee-photos {
-  animation: marquee 55s linear infinite;
+  animation: marquee 22s linear infinite;
 }
 
 /* Gentle floating for decorative panels/chips */

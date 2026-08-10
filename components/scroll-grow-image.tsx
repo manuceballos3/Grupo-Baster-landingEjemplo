@@ -43,7 +43,7 @@ export function ScrollGrowImage() {
       ref={containerRef}
       className="mx-auto max-w-6xl px-4 py-16 sm:px-6 md:py-24"
     >
-      <div className="overflow-hidden rounded-3xl border border-border">
+      <div className="overflow-hidden rounded-3xl">
         <img
           ref={imageRef}
           src="/vidrierabaster1.png"

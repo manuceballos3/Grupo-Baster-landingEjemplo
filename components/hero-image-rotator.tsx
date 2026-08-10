@@ -26,7 +26,7 @@ export function HeroImageRotator() {
 
     const interval = setInterval(() => {
       setActiveIndex((current) => (current + 1) % IMAGES.length)
-    }, 4000)
+    }, 3000)
 
     return () => clearInterval(interval)
   }, [])
