@@ -1,10 +1,12 @@
 import { SiteHeader } from '@/components/site-header'
 import { Hero } from '@/components/hero'
+import { ScrollGrowImage } from '@/components/scroll-grow-image'
 import { Services } from '@/components/services'
 import { Benefits } from '@/components/benefits'
 import { SocialProof } from '@/components/social-proof'
 import { Faq } from '@/components/faq'
 import { Cta } from '@/components/cta'
+import { Location } from '@/components/location'
 import { SiteFooter } from '@/components/site-footer'
 import { FAQ_ITEMS } from '@/lib/faq'
 
@@ -88,11 +90,13 @@ export default function Page() {
       <SiteHeader />
       <main id="contenido">
         <Hero />
+        <ScrollGrowImage />
         <Services />
         <Benefits />
         <SocialProof />
         <Faq />
         <Cta />
+        <Location />
       </main>
       <SiteFooter />
     </>

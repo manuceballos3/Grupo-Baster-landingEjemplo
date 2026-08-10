@@ -231,6 +231,11 @@
   animation: marquee 32s linear infinite;
 }
 
+/* Slower marquee, used for the photo strip */
+.animate-marquee-photos {
+  animation: marquee 55s linear infinite;
+}
+
 /* Gentle floating for decorative panels/chips */
 @keyframes float-y {
   0%,
@@ -336,6 +341,7 @@
     transition: none !important;
   }
   .animate-marquee,
+  .animate-marquee-photos,
   .animate-float,
   .animate-float-slow,
   .animate-spin-slow,
