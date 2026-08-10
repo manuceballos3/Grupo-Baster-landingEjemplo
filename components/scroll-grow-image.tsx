@@ -21,16 +21,16 @@ export function ScrollGrowImage() {
 
       gsap.fromTo(
         imageRef.current,
-        { scale: 0.55, opacity: 0.6 },
+        { scale: 0.5, opacity: 0.5 },
         {
           scale: 1,
           opacity: 1,
-          ease: 'none',
+          duration: 1.6,
+          ease: 'power2.out',
           scrollTrigger: {
             trigger: containerRef.current,
-            start: 'top 95%',
-            end: 'top 5%',
-            scrub: true,
+            start: 'top 85%',
+            toggleActions: 'play none none reverse',
           },
         },
       )
