@@ -28,12 +28,13 @@ export function Cta() {
       className="scroll-mt-20 py-16 md:py-24"
     >
       <div className="mx-auto w-full max-w-6xl px-4 sm:px-6">
-        <div className="relative overflow-hidden rounded-3xl bg-ink px-6 py-12 sm:px-10 md:py-16">
-          {/* Decorative halftone + CMYK bar */}
+        <div className="relative overflow-hidden rounded-3xl bg-[#f0f4f8] px-6 py-12 sm:px-10 md:py-16">
+          {/* Decorative halftone — tinted ink for contrast on light bg */}
           <div
             aria-hidden="true"
-            className="halftone pointer-events-none absolute -right-16 -bottom-16 size-72 rounded-full text-white/10"
+            className="halftone pointer-events-none absolute -right-16 -bottom-16 size-72 rounded-full text-ink/8"
           />
+          {/* CMYK registration bar */}
           <div aria-hidden="true" className="absolute inset-x-0 top-0 flex h-1.5">
             <span className="flex-1 bg-cyan-brand" />
             <span className="flex-1 bg-magenta-brand" />
@@ -44,14 +45,15 @@ export function Cta() {
             <div>
               <Reveal
                 as="h2"
-                className="font-display text-3xl font-bold tracking-tight text-balance text-white sm:text-4xl"
+                className="font-display font-bold tracking-tight text-balance text-ink"
               >
-                ¿Listo para que tu marca se vea increíble?
+                <span className="block text-2xl sm:text-3xl">¿Tenés un proyecto?</span>
+                <span className="misregister-dark block text-4xl sm:text-5xl">Hablemos.</span>
               </Reveal>
               <Reveal
                 as="p"
                 delay={80}
-                className="mt-4 max-w-md text-lg leading-relaxed text-pretty text-white/70"
+                className="mt-4 max-w-md text-lg leading-relaxed text-pretty text-ink-soft"
               >
                 Contanos tu proyecto y te enviamos un presupuesto sin cargo en
                 menos de 24 horas. Sin compromiso.
@@ -59,7 +61,7 @@ export function Cta() {
               <Reveal delay={140} className="mt-8">
                 <a
                   href="https://wa.me/5490000000000"
-                  className="group inline-flex h-12 items-center justify-center gap-2 rounded-full bg-yellow-brand px-6 text-base font-semibold text-ink transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-brand"
+                  className="group inline-flex h-12 items-center justify-center gap-2 rounded-full bg-ink px-6 text-base font-semibold text-white transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink"
                 >
                   <MessageCircle className="size-5" aria-hidden="true" />
                   Escribinos por WhatsApp
@@ -71,7 +73,7 @@ export function Cta() {
               {sent ? (
                 <div
                   role="status"
-                  className="flex flex-col items-center justify-center gap-3 rounded-2xl bg-white p-10 text-center"
+                  className="flex flex-col items-center justify-center gap-3 rounded-2xl border border-ink/10 bg-white p-10 text-center shadow-sm"
                 >
                   <CheckCircle2 className="size-12 text-cyan-brand" aria-hidden="true" />
                   <p className="font-display text-xl font-bold text-ink">
@@ -84,7 +86,7 @@ export function Cta() {
               ) : (
                 <form
                   onSubmit={handleSubmit}
-                  className="rounded-2xl bg-white p-6 sm:p-7"
+                  className="rounded-2xl border border-ink/10 bg-white p-6 shadow-[0_4px_32px_-8px_rgba(32,31,39,0.14)] sm:p-7"
                   aria-label="Formulario de cotización"
                 >
                   <div className="grid gap-4 sm:grid-cols-2">
@@ -101,7 +103,7 @@ export function Cta() {
                         type="text"
                         required
                         autoComplete="name"
-                        className="h-11 w-full rounded-lg border border-border bg-background px-3 text-ink outline-none transition-colors focus-visible:border-cyan-brand focus-visible:ring-3 focus-visible:ring-cyan-brand/25"
+                        className="h-11 w-full rounded-lg border border-gray-200 bg-white px-3 text-ink outline-none transition-colors focus-visible:border-cyan-brand focus-visible:ring-3 focus-visible:ring-cyan-brand/25"
                       />
                     </div>
                     <div>
@@ -117,7 +119,7 @@ export function Cta() {
                         type="email"
                         required
                         autoComplete="email"
-                        className="h-11 w-full rounded-lg border border-border bg-background px-3 text-ink outline-none transition-colors focus-visible:border-cyan-brand focus-visible:ring-3 focus-visible:ring-cyan-brand/25"
+                        className="h-11 w-full rounded-lg border border-gray-200 bg-white px-3 text-ink outline-none transition-colors focus-visible:border-cyan-brand focus-visible:ring-3 focus-visible:ring-cyan-brand/25"
                       />
                     </div>
                     <div>
@@ -130,7 +132,7 @@ export function Cta() {
                       <select
                         id="service"
                         name="service"
-                        className="h-11 w-full rounded-lg border border-border bg-background px-3 text-ink outline-none transition-colors focus-visible:border-cyan-brand focus-visible:ring-3 focus-visible:ring-cyan-brand/25"
+                        className="h-11 w-full rounded-lg border border-gray-200 bg-white px-3 text-ink outline-none transition-colors focus-visible:border-cyan-brand focus-visible:ring-3 focus-visible:ring-cyan-brand/25"
                       >
                         {SERVICE_OPTIONS.map((option) => (
                           <option key={option}>{option}</option>
@@ -149,7 +151,7 @@ export function Cta() {
                         name="message"
                         rows={3}
                         placeholder="Medidas, cantidades, fecha estimada…"
-                        className="w-full rounded-lg border border-border bg-background px-3 py-2.5 text-ink outline-none transition-colors placeholder:text-muted-foreground focus-visible:border-cyan-brand focus-visible:ring-3 focus-visible:ring-cyan-brand/25"
+                        className="w-full rounded-lg border border-gray-200 bg-white px-3 py-2.5 text-ink outline-none transition-colors placeholder:text-ink/40 focus-visible:border-cyan-brand focus-visible:ring-3 focus-visible:ring-cyan-brand/25"
                       />
                     </div>
                   </div>

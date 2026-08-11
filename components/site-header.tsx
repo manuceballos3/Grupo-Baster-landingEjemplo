@@ -49,12 +49,12 @@ export function SiteHeader() {
           <Image
             src="/logo-empresa.jpg"
             alt="Logotipo de Baster"
-            width={40}
-            height={40}
-            className="h-9 w-9 rounded-lg object-contain transition-transform duration-300 group-hover:rotate-6"
+            width={44}
+            height={44}
+            className="h-11 w-11 rounded-lg object-contain transition-transform duration-300 group-hover:rotate-6"
             priority
           />
-          <span className="font-display text-lg font-bold tracking-tight text-ink">
+          <span className="font-display text-xl font-bold tracking-tight text-ink">
             Bas<span className="text-magenta-brand">ter</span>
           </span>
         </a>

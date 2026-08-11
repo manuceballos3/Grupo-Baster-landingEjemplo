@@ -1,6 +1,7 @@
 import { ArrowRight, MapPin, Star } from 'lucide-react'
 
 import { Reveal } from '@/components/reveal'
+import { HeroImageRotator } from '@/components/hero-image-rotator'
 
 export function Hero() {
   return (
@@ -96,11 +97,7 @@ export function Hero() {
             <div className="animate-float-slow absolute inset-0 -rotate-3 rounded-3xl bg-yellow-brand/25" aria-hidden="true" />
             <div className="animate-float absolute inset-0 rotate-2 rounded-3xl bg-cyan-brand/20" aria-hidden="true" />
             <div className="absolute inset-2 overflow-hidden rounded-3xl border border-border bg-secondary shadow-xl">
-              <img
-                src="/placeholder.svg?height=800&width=640"
-                alt="Vidriera de local comercial con ploteado de vinilo personalizado en colores vivos"
-                className="size-full object-cover"
-              />
+              <HeroImageRotator />
             </div>
             {/* Floating chip */}
             <div className="animate-float absolute -bottom-4 -left-4 flex items-center gap-3 rounded-2xl border border-border bg-background/95 px-4 py-3 shadow-lg backdrop-blur">

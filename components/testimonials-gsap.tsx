@@ -1,12 +1,8 @@
 'use client'
 
-import { useRef } from 'react'
-import { useGSAP } from '@gsap/react'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { Quote, Star } from 'lucide-react'
 
-gsap.registerPlugin(ScrollTrigger)
+import { Reveal } from '@/components/reveal'
 
 type Testimonial = {
   name: string
@@ -47,65 +43,23 @@ const TESTIMONIALS: Testimonial[] = [
 ]
 
 export function TestimonialsGsap() {
-  const containerRef = useRef<HTMLUListElement>(null)
-
-  useGSAP(
-    () => {
-      const cards = gsap.utils.toArray<HTMLElement>(
-        containerRef.current?.querySelectorAll('.testimonial-card') ?? [],
-      )
-
-      // Alternating: even index slides in from left, odd from right
-      cards.forEach((card, i) => {
-        const fromX = i % 2 === 0 ? -72 : 72
-
-        gsap.fromTo(
-          card,
-          {
-            x: fromX,
-            opacity: 0,
-            filter: 'blur(5px)',
-          },
-          {
-            x: 0,
-            opacity: 1,
-            filter: 'blur(0px)',
-            duration: 0.85,
-            ease: 'power3.out',
-            // Sequential stagger: each card delays 120ms after the previous
-            delay: i * 0.12,
-            scrollTrigger: {
-              trigger: containerRef.current,
-              start: 'top 82%',
-              toggleActions: 'play none none none',
-              once: true,
-            },
-          },
-        )
-      })
-    },
-    { scope: containerRef },
-  )
-
   return (
-    <ul
-      ref={containerRef}
-      className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4"
-    >
-      {TESTIMONIALS.map((t) => (
-        <li
+    <ul className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      {TESTIMONIALS.map((t, i) => (
+        <Reveal
+          as="li"
           key={t.name}
-          className="testimonial-card flex flex-col rounded-2xl border border-border bg-card p-6 shadow-sm transition-shadow duration-300 hover:shadow-lg"
-          style={{ opacity: 0 }}
+          delay={i * 100}
+          className="flex flex-col rounded-2xl border border-border bg-card p-6 shadow-sm transition-shadow duration-300 hover:shadow-lg"
         >
           <Quote className="size-8 text-cyan-brand" aria-hidden="true" />
           <div
             className="mt-3 flex gap-0.5"
             aria-label={`${t.name} calificó con 5 de 5 estrellas`}
           >
-            {[0, 1, 2, 3, 4].map((i) => (
+            {[0, 1, 2, 3, 4].map((j) => (
               <Star
-                key={i}
+                key={j}
                 className="size-4 fill-yellow-brand text-yellow-brand"
                 aria-hidden="true"
               />
@@ -127,7 +81,7 @@ export function TestimonialsGsap() {
               <p className="text-sm text-ink-soft">{t.role}</p>
             </div>
           </figcaption>
-        </li>
+        </Reveal>
       ))}
     </ul>
   )
