@@ -107,14 +107,26 @@ export function WorkCategories() {
                 alt={category.alt}
                 className="size-full object-cover transition-transform duration-500 motion-reduce:transition-none group-hover:scale-110 motion-reduce:group-hover:scale-100"
               />
+
+              {/* Oscurecido progresivo, solo en desktop al hacer hover — la imagen se ve 
+                  atenuada pero nunca desaparece del todo */}
+              <div
+                aria-hidden="true"
+                className="absolute inset-0 bg-ink/0 transition-colors duration-300 motion-reduce:transition-none md:group-hover:bg-ink/55"
+              />
+
               <span
                 aria-hidden="true"
                 className={`absolute inset-x-0 bottom-0 h-[3px] opacity-0 transition-opacity duration-300 group-hover:opacity-100 ${
                   ACCENT_BG[category.accent]
                 }`}
               />
-              <figcaption className="absolute bottom-4 left-1/2 -translate-x-1/2 rounded-full bg-ink/80 px-4 py-2 backdrop-blur-sm transition-all duration-300 motion-reduce:transition-none group-hover:scale-110 group-hover:px-5 group-hover:py-2.5 motion-reduce:group-hover:scale-100 motion-reduce:group-hover:px-4 motion-reduce:group-hover:py-2">
-                <span className="whitespace-nowrap font-display text-sm font-semibold text-white transition-all duration-300 motion-reduce:transition-none group-hover:text-lg motion-reduce:group-hover:text-sm">
+
+              {/* Nombre del rubro centrado en el medio de la imagen. Siempre visible en 
+                  mobile (no hay hover táctil); en desktop arranca oculto y aparece + crece 
+                  con el hover, en el mismo lugar, sin desplazarse. */}
+              <figcaption className="pointer-events-none absolute inset-0 flex items-center justify-center p-4 text-center">
+                <span className="font-display font-semibold text-white drop-shadow-md text-base transition-all duration-300 motion-reduce:transition-none md:text-lg md:opacity-0 md:group-hover:text-2xl md:group-hover:opacity-100 motion-reduce:md:opacity-100 motion-reduce:md:group-hover:text-lg">
                   {category.name}
                 </span>
               </figcaption>
