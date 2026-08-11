@@ -107,18 +107,16 @@ export function WorkCategories() {
                 alt={category.alt}
                 className="size-full object-cover transition-transform duration-500 motion-reduce:transition-none group-hover:scale-110 motion-reduce:group-hover:scale-100"
               />
-              <div
-                aria-hidden="true"
-                className="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/0 to-transparent"
-              />
               <span
                 aria-hidden="true"
                 className={`absolute inset-x-0 bottom-0 h-[3px] opacity-0 transition-opacity duration-300 group-hover:opacity-100 ${
                   ACCENT_BG[category.accent]
                 }`}
               />
-              <figcaption className="absolute inset-x-0 bottom-0 p-4 font-display font-semibold text-white">
-                {category.name}
+              <figcaption className="absolute bottom-4 left-1/2 -translate-x-1/2 rounded-full bg-ink/80 px-4 py-2 backdrop-blur-sm transition-all duration-300 motion-reduce:transition-none group-hover:scale-110 group-hover:px-5 group-hover:py-2.5 motion-reduce:group-hover:scale-100 motion-reduce:group-hover:px-4 motion-reduce:group-hover:py-2">
+                <span className="whitespace-nowrap font-display text-sm font-semibold text-white transition-all duration-300 motion-reduce:transition-none group-hover:text-lg motion-reduce:group-hover:text-sm">
+                  {category.name}
+                </span>
               </figcaption>
             </figure>
           ))}
